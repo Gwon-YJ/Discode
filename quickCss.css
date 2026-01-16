@@ -1,0 +1,109 @@
+/* ===============================
+   1️⃣ 중앙 UI + DM + 모달/팝업 강제 투명화
+=============================== */
+[class*="container"]:not([class*="sidebar"]),
+[class*="chatContent"],
+[class*="content"]:not([class*="sidebar"]),
+[class*="panels"],
+[class*="form"]:not([class*="sidebar"]),
+[class*="wrapper-"]:not([class*="sidebar"]),
+[class*="layer-"]:not([class*="guilds"]),
+[class*="scroller-"]:not([class*="sidebar"]),
+[class*="inner-"]:not([class*="sidebar"]),
+[class*="flex-"]:not([class*="sidebar"]),
+[class*="dmChannels"],
+[class*="dmChannelContent"],
+[class*="dmChat"],
+[class*="dmMessageContent"],
+[class*="dmTitlebar"],
+[class*="modal-"],
+[class*="popup-"],
+[class*="tooltip-"] {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* 중앙 상단 메뉴바 */
+[class*="titlebar"],
+[class*="channelHeader"],
+[class*="toolbar"] {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* ===============================
+   2️⃣ 메시지 영역 구분 (반투명)
+=============================== */
+.message-2CShn3,
+.cozyMessage-1DWF9U,
+.markup-eYLPri,
+[class*="dmMessage-"] {
+    background: rgba(50,50,50,0.6) !important;
+    border-radius: 6px;
+    padding: 5px 8px;
+    margin-bottom: 3px;
+}
+
+.message-2CShn3:hover,
+.cozyMessage-1DWF9U:hover,
+[class*="dmMessage-"]:hover {
+    background: rgba(70,70,70,0.65) !important;
+}
+
+/* ===============================
+   3️⃣ 글씨 흰색 유지
+=============================== */
+[class*="heading"],
+[class*="title"],
+[class*="name"],
+[class*="username"],
+[class*="contentText"],
+[class*="timestamp"],
+[class*="messageText"],
+[class*="mention"] {
+    color: #ffffff !important;
+}
+
+/* ===============================
+   4️⃣ 서버/폴더 안전 (BetterFolders 플러그인 제어)
+=============================== */
+.guilds-2JjMmN {
+    pointer-events: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 1000 !important;
+    background: rgba(20,20,20,0.85) !important;
+    border-radius: 8px;
+    padding: 4px 0;
+}
+
+.guilds-2JjMmN > .guild-3W0y5p,
+.guilds-2JjMmN > .guildFolder-3X3BPo {
+    pointer-events: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 2px 0;
+}
+
+.guilds-2JjMmN > .guild-3W0y5p svg,
+.guilds-2JjMmN > .guild-3W0y5p img,
+.guilds-2JjMmN > .guildFolder-3X3BPo svg,
+.guilds-2JjMmN > .guildFolder-3X3BPo img {
+    opacity: 1 !important;
+    filter: none !important;
+    transition: transform 0.2s;
+}
+
+.guilds-2JjMmN > .guild-3W0y5p:hover,
+.guilds-2JjMmN > .guildFolder-3X3BPo:hover {
+    transform: scale(1.1);
+}
+
+/* ===== 모든 배경 제거 ===== */
+* {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
