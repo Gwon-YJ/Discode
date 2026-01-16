@@ -1,0 +1,44 @@
+/* ===== 전체 배경 사진 적용 (깃허브 호스팅 이미지) ===== */
+.theme-dark {
+    background-image: url("https://raw.githubusercontent.com/Gwon-YJ/Discode/main/images/js.jpg") !important;
+    background-size: cover !important;          /* 화면 꽉 채움 */
+    background-position: center 20% !important; /* 화면 위쪽 기준 20%로 올림 */
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+/* ===== 채팅 영역, 사이드바, 입력창 최대 투명화 ===== */
+html,
+body,
+#app-mount,
+.scrollerInner-2YIMLh,
+.container-3baos1,
+.sidebar-2K8pFh,
+.textArea-12jD-V,
+.layers-3ey4hk {
+    background: rgba(0,0,0,0.05) !important;  /* 거의 투명 */
+    backdrop-filter: blur(2px) !important;     /* 글자 가독성 위해 살짝 블러 */
+    box-shadow: none !important;
+}
+
+/* ===== 글자 가독성 ===== */
+* {
+    color: #fff !important;
+    text-shadow: 0 0 5px rgba(0,0,0,0.7) !important;
+}
+
+/* ===== 선택 강조 ===== */
+.selection-2L2NYY,
+.marked-29bBHz {
+    background-color: rgba(255,105,180,0.15) !important;
+    border-radius: 4px !important;
+}
+
+/* ===== 팝업 / 툴팁 최소한 유지 ===== */
+.popout-3lCBlR,
+.tooltip-2Cn_0x {
+    background-color: rgba(255,182,193,0.3) !important;
+    color: #000 !important;
+    border-radius: 6px !important;
+    backdrop-filter: blur(2px);
+}
