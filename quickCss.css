@@ -24,48 +24,6 @@
     border: none !important;
 }
 
-/* 중앙 상단 메뉴바 */
-[class*="titlebar"],
-[class*="channelHeader"],
-[class*="toolbar"] {
-    background: transparent !important;
-    box-shadow: none !important;
-    border: none !important;
-}
-
-/* ===============================
-   2️⃣ 메시지 영역 구분 (반투명)
-=============================== */
-.message-2CShn3,
-.cozyMessage-1DWF9U,
-.markup-eYLPri,
-[class*="dmMessage-"] {
-    background: rgba(50,50,50,0.6) !important;
-    border-radius: 6px;
-    padding: 5px 8px;
-    margin-bottom: 3px;
-}
-
-.message-2CShn3:hover,
-.cozyMessage-1DWF9U:hover,
-[class*="dmMessage-"]:hover {
-    background: rgba(70,70,70,0.65) !important;
-}
-
-/* ===============================
-   3️⃣ 글씨 흰색 유지
-=============================== */
-[class*="heading"],
-[class*="title"],
-[class*="name"],
-[class*="username"],
-[class*="contentText"],
-[class*="timestamp"],
-[class*="messageText"],
-[class*="mention"] {
-    color: #ffffff !important;
-}
-
 /* ===============================
    4️⃣ 서버/폴더 안전 (BetterFolders 플러그인 제어)
 =============================== */
