@@ -1,44 +1,175 @@
-/* ===== 전체 배경 사진 적용 (깃허브 호스팅 이미지) ===== */
+/* =================================================
+   🖼️ 전체 배경
+================================================= */
 .theme-dark {
-    background-image: url("https://raw.githubusercontent.com/Gwon-YJ/Discode/main/images/js.jpg") !important;
-    background-size: cover !important;          /* 화면 꽉 채움 */
-    background-position: center 20% !important; /* 화면 위쪽 기준 20%로 올림 */
+    background-image: url("https://raw.githubusercontent.com/Gwon-YJ/Discode/main/images/conan.jpg") !important;
+    background-size: cover !important;
+    background-position: center 12% !important;
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
 }
 
-/* ===== 채팅 영역, 사이드바, 입력창 최대 투명화 ===== */
-html,
-body,
-#app-mount,
-.scrollerInner-2YIMLh,
-.container-3baos1,
-.sidebar-2K8pFh,
-.textArea-12jD-V,
-.layers-3ey4hk {
-    background: rgba(0,0,0,0.05) !important;  /* 거의 투명 */
-    backdrop-filter: blur(2px) !important;     /* 글자 가독성 위해 살짝 블러 */
-    box-shadow: none !important;
+
+/* =================================================
+   메뉴바 카테고리
+================================================= */
+/* 메인 색변경 */
+[class*="containerDefault"] [class*="name"] {
+    color: #a5dd0b !important;
+    text-shadow:
+        0 1px 1px rgba(0,0,0,0.7);
 }
 
-/* ===== 글자 가독성 ===== */
-* {
-    color: #fff !important;
-    text-shadow: 0 0 5px rgba(0,0,0,0.7) !important;
+/* 클릭 시 색변경 */
+[class*="containerDefault"]:hover [class*="name"] {
+    color: #ffffff !important;
 }
 
-/* ===== 선택 강조 ===== */
-.selection-2L2NYY,
-.marked-29bBHz {
-    background-color: rgba(255,105,180,0.15) !important;
-    border-radius: 4px !important;
+/* =================================================
+   🌫️ Glass UI (블러 ↓, 대비 ↑)
+================================================= */
+html, body, #app-mount {
+    background: transparent !important;
 }
 
-/* ===== 팝업 / 툴팁 최소한 유지 ===== */
-.popout-3lCBlR,
-.tooltip-2Cn_0x {
-    background-color: rgba(255,182,193,0.3) !important;
-    color: #000 !important;
-    border-radius: 6px !important;
-    backdrop-filter: blur(2px);
+.chatContent-3KubbW {
+    background: rgba(0,0,0,0.35) !important;
+    border-radius: 16px;
+}
+
+.sidebar-2K8pFh {
+    background: rgba(18,18,18,0.7) !important;
+    backdrop-filter: blur(6px);
+    border-radius: 18px;
+}
+
+.guilds-2JjMmN {
+    background: rgba(15,15,15,0.65) !important;
+    backdrop-filter: blur(6px);
+    border-radius: 16px;
+}
+
+.title-31SJ6t {
+    background: rgba(12,12,12,0.75) !important;
+    backdrop-filter: blur(6px);
+    border-radius: 14px;
+}
+
+.form-3gdLxP {
+    background: rgba(10,10,10,0.75) !important;
+    backdrop-filter: blur(6px);
+    border-radius: 14px;
+}
+
+.message-2CShn3,
+[class*="dmMessage-"] {
+    border-radius: 18px !important;
+    padding: 10px 14px;
+    margin: 6px 0;
+    background: rgba(255,255,255,0.12) !important;
+}
+
+/* =================================================
+   ✍️ 메이플스토리 글씨체 (선명도 강화)
+================================================= */
+@font-face {
+    font-family: 'MapleStory';
+    src: url('fonts/MapleStory.woff2') format('woff2'),
+         url('fonts/MapleStory.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+    font-family: 'MapleStory', cursive !important;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+}
+
+/* =================================================
+   💬 메시지 텍스트 (뿌연 원인 제거)
+================================================= */
+.messageContent-2qWWxC,
+[class*="messageContent"] {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #4e69c0 !important;
+    text-shadow:
+        0 1px 1px rgba(66, 65, 65, 0.6);
+}
+
+/* =================================================
+   👤 닉네임 (역할색 유지 + 또렷)
+================================================= */
+.username-1A8OIy,
+.name-3Uvkvr,
+.headerText-2z4IhQ,
+[class*="username"] {
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    color: inherit !important;
+    text-shadow:
+        0 1px 1px rgba(121, 111, 111, 0.6);
+}
+
+/* =================================================
+   📣 멘션
+================================================= */
+.mention {
+    color: inherit !important;
+    text-shadow: none !important;
+}
+
+/* =================================================
+   📁 채널명 / 서버 리스트 (과한 그림자 제거)
+================================================= */
+.channelName-2YrOjO,
+.channelName-3gBSv6,
+.guilds-2JjMmN * {
+    font-size: 15px !important;
+    color: #e2e2e2 !important;
+    text-shadow:
+        0 1px 1px rgba(0,0,0,0.6);
+}
+
+/* =================================================
+   ✏️ 메시지 입력창 (또렷하게)
+================================================= */
+[class*="editor"],
+[class*="slateTextArea"] {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #000000 !important;
+    caret-color: #000000 !important;
+}
+
+/* placeholder */
+[class*="placeholder"] {
+    color: rgba(120,120,120,0.6) !important;
+}
+
+/* =================================================
+   ❤️ 리액션 하트 (유지)
+================================================= */
+.reaction-3vwAF2 {
+    border-radius: 999px !important;
+    transition: all 0.15s ease-in-out;
+}
+
+.reaction-3vwAF2:hover {
+    box-shadow: 0 0 6px rgba(255,192,203,0.5);
+}
+
+.reaction-3vwAF2.reactionMe-1PwQAc,
+[class*="reaction"][class*="Me"] {
+    box-shadow:
+        0 0 6px rgba(255,105,180,0.7),
+        0 0 12px rgba(255,105,180,0.4) !important;
+    border: 1px solid rgba(255,20,147,0.9) !important;
+}
+
+.reaction-3vwAF2:active {
+    transform: scale(0.9);
 }
