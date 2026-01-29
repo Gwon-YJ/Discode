@@ -79,4 +79,4 @@
 > 비공식 클라이언트 사용에 따른 책임은 사용자 본인에게 있습니다.
 
 - 관련 코드랑 예시 이미지 첨부
-<img width="1580" height="731" alt="image" src="https://github.com/user-attachments/assets/1d27b118-5171-43a5-96e1-e5fca4a0dfdf" />
+
