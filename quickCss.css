@@ -1,67 +1,132 @@
-/* ===============================
-   1️⃣ 중앙 UI + DM + 모달/팝업 강제 투명화
-=============================== */
-[class*="container"]:not([class*="sidebar"]),
-[class*="chatContent"],
-[class*="content"]:not([class*="sidebar"]),
-[class*="panels"],
-[class*="form"]:not([class*="sidebar"]),
-[class*="wrapper-"]:not([class*="sidebar"]),
-[class*="layer-"]:not([class*="guilds"]),
-[class*="scroller-"]:not([class*="sidebar"]),
-[class*="inner-"]:not([class*="sidebar"]),
-[class*="flex-"]:not([class*="sidebar"]),
-[class*="dmChannels"],
-[class*="dmChannelContent"],
-[class*="dmChat"],
-[class*="dmMessageContent"],
-[class*="dmTitlebar"],
-[class*="modal-"],
-[class*="popup-"],
-[class*="tooltip-"] {
+/* =========================================================
+   DISCORD FULL TRANSPARENT
+   폴더 아이콘 유지 + 서버 메뉴 배경 투명
+========================================================= */
+
+
+/* =========================================================
+   1. 전체 기본 영역
+========================================================= */
+
+#app-mount,
+#app-mount > div,
+#app-mount section,
+#app-mount aside,
+#app-mount main,
+#app-mount nav {
     background: transparent !important;
-    box-shadow: none !important;
-    border: none !important;
-}
-
-/* ===============================
-   4️⃣ 서버/폴더 안전 (BetterFolders 플러그인 제어)
-=============================== */
-.guilds-2JjMmN {
-    pointer-events: auto !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    z-index: 1000 !important;
-    background: rgba(20,20,20,0.85) !important;
-    border-radius: 8px;
-    padding: 4px 0;
-}
-
-.guilds-2JjMmN > .guild-3W0y5p,
-.guilds-2JjMmN > .guildFolder-3X3BPo {
-    pointer-events: auto !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    margin: 2px 0;
-}
-
-.guilds-2JjMmN > .guild-3W0y5p svg,
-.guilds-2JjMmN > .guild-3W0y5p img,
-.guilds-2JjMmN > .guildFolder-3X3BPo svg,
-.guilds-2JjMmN > .guildFolder-3X3BPo img {
-    opacity: 1 !important;
-    filter: none !important;
-    transition: transform 0.2s;
-}
-
-.guilds-2JjMmN > .guild-3W0y5p:hover,
-.guilds-2JjMmN > .guildFolder-3X3BPo:hover {
-    transform: scale(1.1);
-}
-
-/* ===== 모든 배경 제거 ===== */
-* {
     background-color: transparent !important;
     box-shadow: none !important;
-    border: none !important;
+}
+
+
+/* =========================================================
+   2. 주요 영역
+========================================================= */
+
+#app-mount [class*="layer"],
+#app-mount [class*="layers"],
+#app-mount [class*="app"],
+#app-mount [class*="base"],
+#app-mount [class*="sidebar"],
+#app-mount [class*="content"],
+#app-mount [class*="container"],
+#app-mount [class*="chat"],
+#app-mount [class*="members"],
+#app-mount [class*="panel"],
+#app-mount [class*="header"],
+#app-mount [class*="scroller"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   3. 카드 / 아이템 / 버튼
+========================================================= */
+
+#app-mount [class*="card"],
+#app-mount [class*="item"],
+#app-mount [class*="button"] {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   4. 왼쪽 서버 메뉴
+   실제 배경으로 확인된 영역
+========================================================= */
+
+#app-mount nav,
+#app-mount nav > * {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   5. 의사 요소
+========================================================= */
+
+#app-mount *::before,
+#app-mount *::after {
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   6. 숫자 및 메뉴 아이템
+========================================================= */
+
+#app-mount nav [class*="item"] {
+    background-color: initial !important;
+    box-shadow: initial !important;
+}
+
+#app-mount nav svg {
+    -webkit-text-fill-color: initial !important;
+}
+
+
+/* =========================================================
+   7. 친구 화면
+========================================================= */
+
+#app-mount main,
+#app-mount main > div,
+#app-mount main > div > div {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   8. 특정 화면 투명화
+========================================================= */
+
+#app-mount [class*="page"],
+#app-mount [class*="content"],
+#app-mount [class*="container"],
+#app-mount [class*="wrapper"],
+#app-mount [class*="contentRegion"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   9. 특정 화면 내부 배경 레이어
+========================================================= */
+
+#app-mount [class*="page"] *,
+#app-mount [class*="content"] *,
+#app-mount [class*="container"] *,
+#app-mount [class*="wrapper"] * {
+    background-color: transparent !important;
+    box-shadow: none !important;
 }
