@@ -1,175 +1,318 @@
 /* =================================================
    🖼️ 전체 배경
 ================================================= */
+
 .theme-dark {
-    background-image: url("https://raw.githubusercontent.com/Gwon-YJ/Discode/main/images/conan.jpg") !important;
+    background-image: url("./images/jisun.png") !important;
     background-size: cover !important;
     background-position: center 12% !important;
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
 }
 
-
-/* =================================================
-   메뉴바 카테고리
-================================================= */
-/* 메인 색변경 */
-[class*="containerDefault"] [class*="name"] {
-    color: #a5dd0b !important;
-    text-shadow:
-        0 1px 1px rgba(0,0,0,0.7);
-}
-
-/* 클릭 시 색변경 */
-[class*="containerDefault"]:hover [class*="name"] {
-    color: #ffffff !important;
-}
-
-/* =================================================
-   🌫️ Glass UI (블러 ↓, 대비 ↑)
-================================================= */
-html, body, #app-mount {
+html,
+body,
+#app-mount {
     background: transparent !important;
 }
 
+
+/* =================================================
+   🌫️ Glass UI
+   배경이 보이면서 글씨는 선명하게
+================================================= */
+
+/* 채팅 영역 */
 .chatContent-3KubbW {
-    background: rgba(0,0,0,0.35) !important;
+    background: rgba(0, 0, 0, 0.30) !important;
     border-radius: 16px;
 }
 
+/* 왼쪽 채널 영역 */
 .sidebar-2K8pFh {
-    background: rgba(18,18,18,0.7) !important;
+    background: rgba(15, 15, 15, 0.65) !important;
     backdrop-filter: blur(6px);
     border-radius: 18px;
 }
 
+/* 서버 아이콘 영역 */
 .guilds-2JjMmN {
-    background: rgba(15,15,15,0.65) !important;
+    background: rgba(10, 10, 10, 0.60) !important;
     backdrop-filter: blur(6px);
     border-radius: 16px;
 }
 
+/* 상단 채널 제목 */
 .title-31SJ6t {
-    background: rgba(12,12,12,0.75) !important;
+    background: rgba(10, 10, 10, 0.65) !important;
     backdrop-filter: blur(6px);
     border-radius: 14px;
 }
 
+/* 메시지 입력 영역 */
 .form-3gdLxP {
-    background: rgba(10,10,10,0.75) !important;
+    background: rgba(10, 10, 10, 0.65) !important;
     backdrop-filter: blur(6px);
     border-radius: 14px;
 }
+
+
+/* =================================================
+   📁 카테고리 / 채널
+================================================= */
+
+/* 카테고리 기본 */
+[class*="containerDefault"] [class*="name"] {
+    color: #b7f51a !important;
+    font-weight: 700 !important;
+
+    text-shadow:
+        1px 1px 2px rgba(0, 0, 0, 0.95),
+        0 0 4px rgba(0, 0, 0, 0.65);
+}
+
+/* 카테고리 마우스 오버 */
+[class*="containerDefault"]:hover [class*="name"] {
+    color: #ffffff !important;
+
+    text-shadow:
+        1px 1px 2px rgba(0, 0, 0, 1),
+        0 0 5px rgba(255, 255, 255, 0.25);
+}
+
+
+/* =================================================
+   📂 채널명
+================================================= */
+
+.channelName-2YrOjO,
+.channelName-3gBSv6 {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+
+    text-shadow:
+        1px 1px 2px rgba(0, 0, 0, 0.95),
+        0 0 4px rgba(0, 0, 0, 0.65);
+}
+
+/* 채널 전체 영역 */
+[class*="containerDefault"] [class*="channelName"] {
+    color: #ffffff !important;
+}
+
+
+/* =================================================
+   ✍️ MapleStory 글씨체
+================================================= */
+
+/* 일반 글씨 */
+@font-face {
+    font-family: "MapleStory";
+    src: url("./fonts/MapleStoryLight.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 굵은 글씨 */
+@font-face {
+    font-family: "MapleStory";
+    src: url("./fonts/MapleStoryBold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+html,
+body,
+#app-mount,
+#app-mount *,
+#app-mount *::before,
+#app-mount *::after {
+    font-family: "MapleStory", sans-serif !important;
+
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+
+
+/* =================================================
+   💬 메시지
+================================================= */
 
 .message-2CShn3,
 [class*="dmMessage-"] {
     border-radius: 18px !important;
     padding: 10px 14px;
     margin: 6px 0;
-    background: rgba(255,255,255,0.12) !important;
+
+    background: rgba(255, 255, 255, 0.10) !important;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.20);
 }
 
-/* =================================================
-   ✍️ 메이플스토리 글씨체 (선명도 강화)
-================================================= */
-@font-face {
-    font-family: 'MapleStory';
-    src: url('fonts/MapleStory.woff2') format('woff2'),
-         url('fonts/MapleStory.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-*,
-*::before,
-*::after {
-    font-family: 'MapleStory', cursive !important;
-    -webkit-font-smoothing: auto;
-    -moz-osx-font-smoothing: auto;
-}
-
-/* =================================================
-   💬 메시지 텍스트 (뿌연 원인 제거)
-================================================= */
+/* 메시지 글자 */
 .messageContent-2qWWxC,
 [class*="messageContent"] {
     font-size: 16px !important;
     font-weight: 600 !important;
-    color: #4e69c0 !important;
+
+    color: #ffffff !important;
+
     text-shadow:
-        0 1px 1px rgba(66, 65, 65, 0.6);
+        1px 1px 2px rgba(0, 0, 0, 0.95),
+        0 0 4px rgba(0, 0, 0, 0.65);
 }
 
+
 /* =================================================
-   👤 닉네임 (역할색 유지 + 또렷)
+   👤 닉네임
+   역할 색상 유지
 ================================================= */
+
 .username-1A8OIy,
 .name-3Uvkvr,
 .headerText-2z4IhQ,
 [class*="username"] {
     font-size: 17px !important;
     font-weight: 700 !important;
+
     color: inherit !important;
+
     text-shadow:
-        0 1px 1px rgba(121, 111, 111, 0.6);
+        1px 1px 2px rgba(0, 0, 0, 1),
+        0 0 4px rgba(0, 0, 0, 0.70);
 }
+
 
 /* =================================================
    📣 멘션
 ================================================= */
+
 .mention {
-    color: inherit !important;
-    text-shadow: none !important;
-}
+    color: #ffffff !important;
 
-/* =================================================
-   📁 채널명 / 서버 리스트 (과한 그림자 제거)
-================================================= */
-.channelName-2YrOjO,
-.channelName-3gBSv6,
-.guilds-2JjMmN * {
-    font-size: 15px !important;
-    color: #e2e2e2 !important;
     text-shadow:
-        0 1px 1px rgba(0,0,0,0.6);
+        1px 1px 2px rgba(0, 0, 0, 0.95);
 }
 
+
 /* =================================================
-   ✏️ 메시지 입력창 (또렷하게)
+   ✏️ 메시지 입력창
 ================================================= */
+
 [class*="editor"],
 [class*="slateTextArea"] {
     font-size: 16px !important;
     font-weight: 600 !important;
-    color: #000000 !important;
-    caret-color: #000000 !important;
+
+    color: #ffffff !important;
+    caret-color: #ffffff !important;
+
+    text-shadow:
+        1px 1px 2px rgba(0, 0, 0, 0.95);
 }
 
-/* placeholder */
+/* 입력창 placeholder */
 [class*="placeholder"] {
-    color: rgba(120,120,120,0.6) !important;
+    color: rgba(255, 255, 255, 0.65) !important;
+
+    text-shadow:
+        1px 1px 2px rgba(0, 0, 0, 0.8);
 }
+
 
 /* =================================================
-   ❤️ 리액션 하트 (유지)
+   🧑 사용자 목록
 ================================================= */
+
+[class*="member"] [class*="name"],
+[class*="members"] [class*="name"] {
+    color: #ffffff !important;
+
+    text-shadow:
+        1px 1px 2px rgba(0, 0, 0, 0.95);
+}
+
+
+/* =================================================
+   🔔 알림 / 상태 텍스트
+================================================= */
+
+[class*="activity"],
+[class*="status"] {
+    text-shadow:
+        1px 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+
+/* =================================================
+   ❤️ 리액션
+================================================= */
+
 .reaction-3vwAF2 {
     border-radius: 999px !important;
-    transition: all 0.15s ease-in-out;
+    transition:
+        all 0.15s ease-in-out;
+
+    background: rgba(255, 255, 255, 0.10) !important;
 }
 
+/* 리액션 hover */
 .reaction-3vwAF2:hover {
-    box-shadow: 0 0 6px rgba(255,192,203,0.5);
+    box-shadow:
+        0 0 6px rgba(255, 192, 203, 0.5),
+        0 0 12px rgba(255, 192, 203, 0.25);
 }
 
+/* 내가 누른 리액션 */
 .reaction-3vwAF2.reactionMe-1PwQAc,
 [class*="reaction"][class*="Me"] {
     box-shadow:
-        0 0 6px rgba(255,105,180,0.7),
-        0 0 12px rgba(255,105,180,0.4) !important;
-    border: 1px solid rgba(255,20,147,0.9) !important;
+        0 0 6px rgba(255, 105, 180, 0.7),
+        0 0 12px rgba(255, 105, 180, 0.4) !important;
+
+    border:
+        1px solid rgba(255, 20, 147, 0.9) !important;
 }
 
+/* 클릭 */
 .reaction-3vwAF2:active {
     transform: scale(0.9);
+}
+
+
+/* =================================================
+   🔘 버튼 / 아이콘
+================================================= */
+
+button,
+[class*="button"] {
+    text-shadow:
+        1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+
+/* =================================================
+   📜 스크롤바
+================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.35);
 }
